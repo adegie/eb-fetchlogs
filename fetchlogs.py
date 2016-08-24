@@ -23,7 +23,7 @@ def logs_zip(folder):
 
 
 def unzip(folder, zipfile):
-    result = os.popen("(cd %(folder)s && unzip %(zipfile)s)" % locals()).read()
+    result = os.popen("(cd %(folder)s && unzip -o %(zipfile)s)" % locals()).read()
     return result
 
 
